@@ -1,0 +1,12 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    {% for lang in config.languages %}
+        <sitemap>
+            <loc>{{ config.url }}/{{ lang }}/sitemap.xml</loc>
+        </sitemap>
+    {% endfor %}
+</sitemapindex>

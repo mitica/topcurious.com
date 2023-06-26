@@ -1,0 +1,30 @@
+{
+  "title": "TopCurious.com",
+  "domain": "https://www.topcurious.com",
+  "search": true,
+  "logoUrl": "/_images/guracasca.svg",
+  "schema": "https://",
+  "url": "https://www.topcurious.com",
+  "googleAnalyticsID": "G-HW7JLQXFMV",
+  "footerLinks": [],
+  "navbarMenu": [
+    {
+      "anchor": "Despre",
+      "url": "/despre/"
+    }
+  ],
+  "navbarButtons": [],
+  "social": {
+    "facebook": "https://www.facebook.com/topcurious.com",
+    "github": "https://github.com/mitica/topcurious.com"
+  },
+  "showShareButtons": true,
+  "showDate": true,
+  "showRelatedPosts": true,
+  "languages": ["en", "ru", "ro", "es", "fr", "de", "it", "pt", "pl", "tr"],
+  "ro": {
+    "published": "Publicat",
+    "relatedPostsTitle": "Pe aceeași temă",
+    "video": "Video"
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="{{ locale or 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+
+    <link rel="stylesheet" href="{{ '/theme.css' | url }}">
+    <link rel="icon" type="image/png" href="/_images/favicon.png" sizes="32x32">
+
+    {% if layout === 'post.njk' or layout === 'post-minimal.njk' %}
+      <meta property="og:site_name" content="{{ config[locale].title or config.title }}"/>
+      <meta property="og:type" content="article"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta property="og:title" content="{{ title }}"/>
+      <meta property="og:description" content="{{ description }}"/>
+      {% if permalink %}
+        <meta property="og:url" content="{{config.url}}{{ permalink }}"/>
+      {% else %}
+        <meta property="og:url" content="{{config.url}}{{ page.filePathStem }}/"/>
+      {% endif %}
+
+      {% if featuredImageLarge !== undefined %}
+        <meta property="og:image" content="{{config.url}}{{featuredImageLarge}}"/>
+      {% else %}
+        <meta property="og:image" content="{{config.url}}/_images/default.jpg"/>
+      {% endif %}
+      
+      {% if youtubeVideoId !== undefined %}
+        {# <meta property="og:type" content="video"> #}
+        <meta property="og:video:url" content="https://www.youtube.com/embed/{{ youtubeVideoId }}">
+      {% endif %}
+
+    {% endif %}
+
+    {# {% set css %}
+      {% include "custom.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style> #}
+    {# <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3959589883092051"
+     crossorigin="anonymous"></script> #}
+     <script>var CURRENT_LOCALE = '{{ locale }}';</script>
+  </head>

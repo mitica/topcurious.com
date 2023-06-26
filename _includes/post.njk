@@ -1,0 +1,74 @@
+---
+title: "Title"
+---
+
+{% include "head.njk" %}
+
+<body class="is-flex is-flex-direction-column">
+
+  {% include "nav.njk" %}
+
+  <main class="section is-flex-grow-1">
+
+    <div class="container">
+      {% topPostAd %}
+    </div>
+
+
+    <article class="container article">
+      <header class="container has-text-centered">
+        {% if config.showDate %}
+          <p class="mb-1">
+            <time class="has-text-grey-dark is-size-7">{{config[locale].published}}: {{ page.date | postDate(locale) }}</time>
+          </p>
+        {% endif %}
+        <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">{{ title}}</h1>
+        <p class="is-size-5 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>
+        <div class="tags is-justify-content-center mt-3 is-uppercase">
+          {% for tag in tags %}
+            <a href="/{{ language }}/tags/{{ tag | tagParam }}/" class="tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </header>
+
+      {% if featuredImageMedium %}
+        <figure class="image featured-image py-5" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
+          <img src="{{featuredImageMedium}}" alt="{{title}}" class="image is-fullwidth" />
+          <i></i>
+        </figure>
+      {% endif %}
+
+      {% bottomImagePostAd %}
+
+      <div class="is-flex">
+
+        <div class="article-content content mb-0">
+          {{ content | safe }}
+        </div>
+
+        {% if config.showShareButtons%}
+          {% include "share-buttons.njk" %}
+        {% endif %}
+
+      </div>
+
+      {% bottomContentPostAd %}
+{# <ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-3959589883092051"
+  data-ad-slot="6615500309"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script> #}
+
+    </article>
+  </main>
+
+  {% if config.showRelatedPosts %}
+    {% include "related-posts.njk" %}
+  {% endif %}
+
+  {% include "footer.njk" %}
+</body>
+
+</html>

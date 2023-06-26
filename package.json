@@ -1,0 +1,27 @@
+{
+  "name": "topcurious.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "serve": "env ELEVENTY_ENV=development npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "clean-css": "^5.1.2",
+    "confetti": "^1.1.2",
+    "eleventy-plugin-purgecss": "^0.1.1",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.7.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.1.2"
+  }
+}

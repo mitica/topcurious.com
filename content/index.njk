@@ -1,0 +1,35 @@
+---
+layout: index_layout.njk
+title: Știri gură-cască!
+description: Știri incredibile pentru toți gură-cască!
+eleventyExcludeFromCollections: true
+---
+
+<section class="section is-flex-grow-1">
+  <style>
+    .langs {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    .langs li {
+      margin: 0 0.5rem;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <div class="container">
+    <h1 class="title is-1 is-size-3-mobile has-text-weight-bold is-centered">Select your language</h1>
+    <br/>
+    <ul class="langs">
+      {% for lang in config.languages %}
+        <li>
+          <a href="/{{ lang }}/">{{ lang | langNativeName }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
