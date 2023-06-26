@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/en/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/ru/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/ro/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/es/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/fr/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/de/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/it/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/pt/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/pl/sitemap.xml</loc>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.topcurious.com/tr/sitemap.xml</loc>
+        </sitemap>
+    
+</sitemapindex>
