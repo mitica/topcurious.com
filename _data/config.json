@@ -8,7 +8,18 @@
   "schema": "https://",
   "url": "https://www.topcurious.com",
   "googleAnalyticsID": "G-HSQLWK4MXL",
-  "footerLinks": [],
+  "footerLinks": [
+    { "anchor": "English", "url": "/en/" },
+    { "anchor": "Русский", "url": "/ru/" },
+    { "anchor": "Română", "url": "/ro/" },
+    { "anchor": "Español", "url": "/es/" },
+    { "anchor": "Français", "url": "/fr/" },
+    { "anchor": "Deutsch", "url": "/de/" },
+    { "anchor": "Italiano", "url": "/it/" },
+    { "anchor": "Português", "url": "/pt/" },
+    { "anchor": "Polski", "url": "/pl/" },
+    { "anchor": "Türkçe", "url": "/tr/" }
+  ],
   "navbarMenu": [],
   "navbarButtons": [],
   "social": {
