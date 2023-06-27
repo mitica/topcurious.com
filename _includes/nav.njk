@@ -1,11 +1,13 @@
 <nav id="main-navbar" class="navbar is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a role="button" class="navbar-burger ml-0" aria-label="menu" aria-expanded="false" data-target="mobile-navbar">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+      {% if config.navbarMenu.length > 0 %}
+        <a role="button" class="navbar-burger ml-0" aria-label="menu" aria-expanded="false" data-target="mobile-navbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      {% endif %}
       <a class="navbar-item" href="{{ '/' | localeUrl(locale) }}">
         {% if config.logoUrl.length > 0 %}
           <img id="logo-img" src="{{ config.logoUrl }}" alt="{{ config.title }}"/>
