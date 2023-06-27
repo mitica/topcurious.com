@@ -21,6 +21,71 @@
   "ro": {
     "published": "Publicat",
     "relatedPostsTitle": "Pe aceeași temă",
-    "video": "Video"
+    "video": "Video",
+    "title": "Cele mai curioase topuri",
+    "description": "Cele mai interesante și curioase lucruri din lume"
+  },
+  "en": {
+    "published": "Published",
+    "relatedPostsTitle": "Related posts",
+    "video": "Video",
+    "title": "The most curious tops",
+    "description": "The most interesting and curious things in the world"
+  },
+  "ru": {
+    "published": "Опубликовано",
+    "relatedPostsTitle": "По теме",
+    "video": "Видео",
+    "title": "Самые любопытные топы",
+    "description": "Самые интересные и любопытные вещи в мире"
+  },
+  "es": {
+    "published": "Publicado",
+    "relatedPostsTitle": "En el mismo tema",
+    "video": "Video",
+    "title": "Los tops más curiosos",
+    "description": "Las cosas más interesantes y curiosas del mundo"
+  },
+  "fr": {
+    "published": "Publié",
+    "relatedPostsTitle": "Sur le même sujet",
+    "video": "Vidéo",
+    "title": "Les tops les plus curieux",
+    "description": "Les choses les plus intéressantes et curieuses du monde"
+  },
+  "de": {
+    "published": "Veröffentlicht",
+    "relatedPostsTitle": "Auf dem gleichen Thema",
+    "video": "Video",
+    "title": "Die neugierigsten Tops",
+    "description": "Die interessantesten und neugierigsten Dinge der Welt"
+  },
+  "it": {
+    "published": "Pubblicato",
+    "relatedPostsTitle": "Sullo stesso argomento",
+    "video": "Video",
+    "title": "I top più curiosi",
+    "description": "Le cose più interessanti e curiose del mondo"
+  },
+  "pt": {
+    "published": "Publicado",
+    "relatedPostsTitle": "No mesmo tópico",
+    "video": "Vídeo",
+    "title": "Os tops mais curiosos",
+    "description": "As coisas mais interessantes e curiosas do mundo"
+  },
+  "pl": {
+    "published": "Opublikowany",
+    "relatedPostsTitle": "Na ten sam temat",
+    "video": "Wideo",
+    "title": "Najciekawsze topy",
+    "description": "Najciekawsze i najciekawsze rzeczy na świecie"
+  },
+  "tr": {
+    "published": "Yayınlanan",
+    "relatedPostsTitle": "Aynı konu",
+    "video": "Video",
+    "title": "En meraklı üstler",
+    "description": "Dünyadaki en ilginç ve meraklı şeyler"
   }
 }
