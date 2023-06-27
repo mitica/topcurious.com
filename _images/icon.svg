@@ -1,0 +1,8 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <circle cx="50" cy="50" r="50" fill="#FEC512" />
+    <text fill="#111111" font-family="Sans-serif" font-size="52"
+      font-weight="bold" letter-spacing="0" text-anchor="middle" textLength="0" word-spacing="0"
+      x="52" xml:space="preserve" y="66">top</text>
+  </g>
+</svg>
