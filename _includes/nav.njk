@@ -1,4 +1,4 @@
-<nav id="main-navbar" class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+<nav id="main-navbar" class="navbar is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a role="button" class="navbar-burger ml-0" aria-label="menu" aria-expanded="false" data-target="mobile-navbar">
@@ -10,7 +10,7 @@
         {% if config.logoUrl.length > 0 %}
           <img id="logo-img" src="{{ config.logoUrl }}" alt="{{ config.title }}"/>
         {% else %}
-          <span class="logo-text">{{ config.title }}</span>
+          <span class="logo-text">{{ config.name }}</span>
         {% endif %}
       </a>
       <a id="share-mobile" href="#" class="navbar-item is-hidden-desktop ml-auto mr-2" aria-label="share button for mobile">

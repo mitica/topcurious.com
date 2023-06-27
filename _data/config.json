@@ -1,18 +1,14 @@
 {
   "title": "TopCurious.com",
+  "name": "TopCurious",
   "domain": "https://www.topcurious.com",
   "search": true,
-  "logoUrl": "/_images/guracasca.svg",
+  "logoUrl": "/_images/logo.svg",
   "schema": "https://",
   "url": "https://www.topcurious.com",
-  "googleAnalyticsID": "G-HW7JLQXFMV",
+  "googleAnalyticsID": "G-HSQLWK4MXL",
   "footerLinks": [],
-  "navbarMenu": [
-    {
-      "anchor": "Despre",
-      "url": "/despre/"
-    }
-  ],
+  "navbarMenu": [],
   "navbarButtons": [],
   "social": {
     "facebook": "https://www.facebook.com/topcurious.com",

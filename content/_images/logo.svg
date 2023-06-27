@@ -1,0 +1,20 @@
+<svg width="345" height="126" xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="svg_blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
+    </filter>
+  </defs>
+  <g>
+    <circle cx="62" cy="63" fill="#FEC512" r="60" />
+    <text fill="#000000" filter="url(#svg_blur)" font-family="Sans-serif" font-size="56"
+      font-weight="bold" letter-spacing="0" text-anchor="middle" textLength="0" word-spacing="0"
+      x="255.2" xml:space="preserve" y="77.8">urious</text>
+    <text fill="#000000" filter="url(#svg_blur)" font-family="Sans-serif" font-size="56"
+      font-weight="bold" letter-spacing="0" text-anchor="middle" textLength="0" word-spacing="0"
+      x="66.2" xml:space="preserve" y="78.7">top</text>
+    <text fill="#000000" filter="url(#svg_blur)" font-family="Sans-serif" font-size="60"
+      font-weight="bold" letter-spacing="0" text-anchor="middle"
+      textLength="0" word-spacing="0" x="149.2" xml:space="preserve" y="81">C</text>
+  </g>
+</svg>
