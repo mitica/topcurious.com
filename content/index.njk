@@ -33,4 +33,17 @@ eleventyExcludeFromCollections: true
       {% endfor %}
     </ul>
   </div>
+  <script>
+    function redirectToUserLocale() {
+      setTimeout(() => {
+        const userLocale = (navigator.language || navigator.userLanguage).substring(0, 2);
+        if (userLocale && userLocale !== CURRENT_LOCALE && ALL_LOCALES.includes(userLocale)) {
+          window
+            .location
+            .replace(`/${userLocale}/`);
+        }
+      }, 500);
+    }
+    redirectToUserLocale();
+  </script>
 </section>

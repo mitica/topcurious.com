@@ -46,5 +46,5 @@
     </style> #}
     {# <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3959589883092051"
      crossorigin="anonymous"></script> #}
-     <script>var CURRENT_LOCALE = '{{ locale }}';</script>
+     <script>var CURRENT_LOCALE = '{{ locale }}';var ALL_LOCALES={{ config.languages | stringify | safe }};</script>
   </head>
