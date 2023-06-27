@@ -8,7 +8,7 @@ featuredImageMedium: /_images/t/top-10-abandoned-places-around-the-world-cover-e
 featuredImageLarge: /_images/t/top-10-abandoned-places-around-the-world-cover-es-large.webp
 permalink: /es/2023/top-10-abandoned-places-around-the-world.html
 date: 2023-06-26T20:25:04.293Z
-youtubeVideoId: 1
+youtubeVideoId: 58xe1aMuXhc
 language: es
 languages: ['en', 'ro', 'ru', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'tr']
 description: >
