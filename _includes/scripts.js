@@ -133,5 +133,5 @@ for (icon of searchIcons) {
 
 function putVideoHere(el, id) {
   const h = Math.max(el.offsetHeight - 50, 240);
-  el.innerHTML = `<iframe width="100%" height="${h}" src="https://www.youtube.com/embed/${id}?controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  el.innerHTML = `<iframe width="100%" height="${h}" src="https://www.youtube.com/embed/${id}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 }
