@@ -111,6 +111,8 @@ module.exports = function (eleventyConfig) {
       .toLocaleString(format || DateTime.DATE_SHORT);
   });
 
+  eleventyConfig.addFilter('stringify', JSON.stringify);
+
   // Número de caracteres para Card
   eleventyConfig.addFilter("descriptionLength", function (text) {
     let resultado;

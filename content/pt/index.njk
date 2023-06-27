@@ -1,7 +1,8 @@
 ---
 layout: index_layout.njk
-title: {{ config.pt.title }}
-description: {{ config.pt.description }}
+eleventyComputed:
+  title: "{{ config[locale].title }}"
+  description: "{{ config[locale].description }}"
 eleventyExcludeFromCollections: true
 pagination:
   data: collections.posts_pt

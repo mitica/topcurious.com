@@ -7,7 +7,7 @@ pagination:
 permalink: /ro/tags/{{ tag | tagParam }}/
 eleventyExcludeFromCollections: true
 eleventyComputed:
-  title: "Topuri despre {{tag}}"
+  title: "{{ config[locale].title }}: {{tag}}"
 ---
 
 <section class="section is-flex-grow-1">
