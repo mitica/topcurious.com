@@ -14,7 +14,6 @@ title: "Title"
       {% topPostAd %}
     </div>
 
-
     <article class="container article">
       <header class="container has-text-centered">
         {% if config.showDate %}
@@ -32,10 +31,12 @@ title: "Title"
       </header>
 
       {% if featuredImageMedium %}
-        <figure class="image featured-image py-5" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
-          <img src="{{featuredImageMedium}}" alt="{{title}}" class="image is-fullwidth" />
-          <i></i>
-        </figure>
+        <div class="py-5">
+          <figure class="image featured-image is-5by3" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
+            <img src="{{featuredImageMedium}}" alt="{{title}}" class="image is-fullwidth"/>
+            <i></i>
+          </figure>
+        </div>
       {% endif %}
 
       {% bottomImagePostAd %}
@@ -53,7 +54,7 @@ title: "Title"
       </div>
 
       {% bottomContentPostAd %}
-{# <ins class="adsbygoogle"
+      {# <ins class="adsbygoogle"
   style="display:block; text-align:center;"
   data-ad-layout="in-article"
   data-ad-format="fluid"
