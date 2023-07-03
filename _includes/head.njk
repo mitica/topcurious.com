@@ -14,7 +14,7 @@
     <link rel="icon" href="/_images/icon.svg" type="image/svg+xml">
 
     {% if layout === 'post.njk' or layout === 'post-minimal.njk' %}
-      <meta property="og:site_name" content="{{ config[locale].title or config.title }}"/>
+      <meta property="og:site_name" content="{{ config.name }}"/>
       <meta property="og:type" content="article"/>
       <meta name="twitter:card" content="summary"/>
       <meta property="og:title" content="{{ title }}"/>
@@ -32,8 +32,9 @@
       {% endif %}
       
       {% if youtubeVideoId !== undefined %}
-        {# <meta property="og:type" content="video"> #}
-        <meta property="og:video:url" content="https://www.youtube.com/embed/{{ youtubeVideoId }}">
+        <meta property="og:type" content="video"/>
+        <meta property="og:video:url" content="https://www.youtube.com/embed/{{ youtubeVideoId }}"/>
+        <meta property="og:video:type" content="text/html"/>
       {% endif %}
 
     {% endif %}
