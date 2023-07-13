@@ -2,7 +2,7 @@
 layout: post.njk
 title: >
   Le 10 auto d'epoca più iconiche a Cuba
-tags: ['cuba', 'auto d'epoca', 'cultura delle auto']
+tags: ['cuba', 'auto d\'epoca', 'cultura delle auto']
 featuredImageSmall: /_images/t/top-10-most-iconic-vintage-cars-in-cuba-cover-it-small.webp
 featuredImageMedium: /_images/t/top-10-most-iconic-vintage-cars-in-cuba-cover-it-medium.webp
 featuredImageLarge: /_images/t/top-10-most-iconic-vintage-cars-in-cuba-cover-it-large.webp
