@@ -2,7 +2,13 @@
 layout: post.njk
 title: >
   Le 10 moto d'epoca dimenticate più importanti
-tags: ['moto d'epoca', 'classici', 'dimenticati', 'tesori nascosti', 'storici']
+tags:
+  - moto d'epoca
+  - classici
+  - dimenticati
+  - tesori nascosti
+  - storici
+
 featuredImageSmall: /_images/t/top-10-forgotten-vintage-motorcycles-cover-it-small.webp
 featuredImageMedium: /_images/t/top-10-forgotten-vintage-motorcycles-cover-it-medium.webp
 featuredImageLarge: /_images/t/top-10-forgotten-vintage-motorcycles-cover-it-large.webp
