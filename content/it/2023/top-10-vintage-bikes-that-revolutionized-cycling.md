@@ -2,7 +2,11 @@
 layout: post.njk
 title: >
   Le 10 migliori biciclette vintage che hanno rivoluzionato il ciclismo
-tags: ['biciclette d'epoca', 'ciclismo', 'biciclette iconiche']
+tags:
+  - biciclette d'epoca
+  - ciclismo
+  - biciclette iconiche
+
 featuredImageSmall: /_images/t/top-10-vintage-bikes-that-revolutionized-cycling-cover-it-small.webp
 featuredImageMedium: /_images/t/top-10-vintage-bikes-that-revolutionized-cycling-cover-it-medium.webp
 featuredImageLarge: /_images/t/top-10-vintage-bikes-that-revolutionized-cycling-cover-it-large.webp
