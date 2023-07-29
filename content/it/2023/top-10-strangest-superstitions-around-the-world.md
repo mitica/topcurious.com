@@ -4,8 +4,8 @@ title: >
   Le 10 superstizioni più strane al mondo
 tags:
   - superstizioni
-	- cultura
-	- credenze
+  - cultura
+  - credenze
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-it-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-it-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-it-large.webp

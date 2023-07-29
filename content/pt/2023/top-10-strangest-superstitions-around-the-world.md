@@ -4,8 +4,8 @@ title: >
   Top 10 Superstições Mais Estranhas ao Redor do Mundo
 tags:
   - superstições
-	- cultura
-	- crenças
+  - cultura
+  - crenças
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pt-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pt-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pt-large.webp

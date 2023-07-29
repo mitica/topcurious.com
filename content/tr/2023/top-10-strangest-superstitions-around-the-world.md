@@ -4,8 +4,8 @@ title: >
   Dünyadaki En Garip 10 Batıl İnanç
 tags:
   - batıl inançlar
-	- kültür
-	- inançlar
+  - kültür
+  - inançlar
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-tr-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-tr-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-tr-large.webp

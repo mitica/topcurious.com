@@ -4,8 +4,8 @@ title: >
   Die 10 seltsamsten Aberglauben weltweit
 tags:
   - aberglauben
-	- kultur
-	- glauben
+  - kultur
+  - glauben
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-de-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-de-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-de-large.webp

@@ -4,8 +4,8 @@ title: >
   Топ-10 самых странных суеверий в мире
 tags:
   - суеверия
-	- культура
-	- верования
+  - культура
+  - верования
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-ru-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-ru-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-ru-large.webp

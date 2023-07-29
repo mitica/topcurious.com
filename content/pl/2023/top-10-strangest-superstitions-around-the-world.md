@@ -4,8 +4,8 @@ title: >
   Top 10 Najdziwniejszych Przesądów na Świecie
 tags:
   - przesądy
-	- kultura
-	- wierzenia
+  - kultura
+  - wierzenia
 featuredImageSmall: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pl-small.webp
 featuredImageMedium: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pl-medium.webp
 featuredImageLarge: /_images/t/top-10-strangest-superstitions-around-the-world-cover-pl-large.webp
