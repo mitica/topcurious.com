@@ -21,7 +21,9 @@ title: "Title"
             <time class="has-text-grey-dark is-size-7">{{config[locale].published}}: {{ page.date | postDate(locale) }}</time>
           </p>
         {% endif %}
-        <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">{% if youtubeVideoId.length > 0 %}{{ config[locale].video + ": " }}{% endif %}{{ title}}</h1>
+        <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">
+          {% if youtubeVideoId.length > 0 %}{{ config[locale].video + ": " }}
+          {% endif %}{{ title}}</h1>
         <p class="is-size-5 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>
         <div class="tags is-justify-content-center mt-3 is-uppercase">
           {% for tag in tags %}
@@ -33,7 +35,7 @@ title: "Title"
       {% if featuredImageMedium %}
         <div class="py-5">
           <figure class="image featured-image is-5by3" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
-            <img src="{{featuredImageMedium}}" alt="{{title}}" class="image is-fullwidth"/>
+            <img loading="lazy" srcset="{{featuredImageSmall}} 400w,{{featuredImageMedium}} 800w" sizes="(max-width: 480px) 400px,800px" alt="{{title}}" class="image is-fullwidth" />
             <i></i>
           </figure>
         </div>

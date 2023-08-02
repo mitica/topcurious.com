@@ -9,14 +9,12 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   }
 
   const token = tokens[idx];
-  let imgSrc = token.attrGet("src");
-  const imgAlt = token.content;
+  const imgSrc = token.attrGet("src");
+  const smallSrc = imgSrc.replace(/medium.webp$/, "small.webp");
+  const imgAlt = (token.content || "").replace(/\"/g, "");
   const imgTitle = token.attrGet("title");
 
-  const img = `<img src="${imgSrc}" alt="${imgAlt.replace(
-    /\"/g,
-    ""
-  )}" loading="lazy">`;
+  const img = `<img loading="lazy" srcset="${smallSrc} 400w,${imgSrc} 800w" sizes="(max-width: 480px) 400px,800px" alt="${imgAlt}"/>`;
 
   return imgTitle
     ? figure(img, imgTitle)
@@ -122,7 +120,7 @@ module.exports = function (eleventyConfig) {
       .toLocaleString(format || DateTime.DATE_SHORT);
   });
 
-  eleventyConfig.addFilter('stringify', JSON.stringify);
+  eleventyConfig.addFilter("stringify", JSON.stringify);
 
   // Número de caracteres para Card
   eleventyConfig.addFilter("descriptionLength", function (text) {
