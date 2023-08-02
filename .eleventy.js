@@ -14,7 +14,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const imgAlt = (token.content || "").replace(/\"/g, "");
   const imgTitle = token.attrGet("title");
 
-  const img = `<img loading="lazy" srcset="${smallSrc} 400w,${imgSrc} 800w" sizes="(max-width: 480px) 400px,800px" alt="${imgAlt}"/>`;
+  const img = `<img loading="lazy" srcset="${smallSrc} 400w, ${imgSrc} 800w" sizes="(max-width: 560px) 400px, 800px" alt="${imgAlt}"/>`;
 
   return imgTitle
     ? figure(img, imgTitle)
