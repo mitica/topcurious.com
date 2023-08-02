@@ -35,7 +35,7 @@ title: "Title"
       {% if featuredImageMedium %}
         <div class="py-5">
           <figure class="image featured-image is-5by3" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
-            <img loading="lazy" srcset="{{featuredImageSmall}} 560w, {{featuredImageMedium}} 800w" sizes="(max-width: 560px) 560px, 800px" alt="{{title}}" class="image is-fullwidth" />
+            <img loading="lazy" srcset="{{featuredImageSmall}} 560w, {{featuredImageMedium}} 800w" sizes="(min-width: 560px) 800px, 560px" alt="{{title}}" class="image is-fullwidth" />
             <i></i>
           </figure>
         </div>
