@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
 {%- for item in collections['posts_' + locale] -%}
   {
     "url" : "{{ item.url }}",
-    "title" : "{{ item.data.title.trim() | removeQuotes }}",
+    "title" : "{{ item.data.title.trim() | removeQuotes }}"
   }{% if not loop.last %},{% else %}{%- endif -%}
 {%- endfor -%}
 ]}

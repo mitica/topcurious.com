@@ -1,6 +1,7 @@
 const markdown = require("markdown-it")();
 const { getLangNativeName } = require("./lang-name-map");
 const configData = require("./_data/config.json");
+const getImportantNews = require("./lib/get-important-news");
 const languages = configData.languages;
 
 markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
@@ -20,6 +21,41 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     ? figure(img, imgTitle)
     : `<figure class="image">${img}</figure>`;
 };
+
+function relatedPostsFilter(collection, tags, path, limit, locale) {
+  const uniqueposts = new Set();
+
+  collection.map((item) => {
+    if (item.data.language !== locale) return;
+    for (const tag of tags) {
+      // console.log(item.data.tags.length)
+      if (item.data.tags) {
+        const tags = item.data.tags.map(simpleTag);
+        if (tags.includes(simpleTag(tag))) uniqueposts.add(item);
+      }
+    }
+  });
+
+  // Eliminar Post Actual
+  for (const item of uniqueposts) {
+    if (item.data.page.inputPath == path) {
+      uniqueposts.delete(item);
+    }
+  }
+
+  // Limitar el número de Articulos y que sean aleatorios
+  let relatedPosts = Array.from(uniqueposts);
+  if (relatedPosts.length <= limit) {
+    return relatedPosts;
+  }
+
+  do {
+    let indice = Math.floor(Math.random() * relatedPosts.length);
+    relatedPosts.splice(indice - 1, 1);
+  } while (relatedPosts.length > limit);
+
+  return relatedPosts;
+}
 
 const simpleTag = (text) =>
   text.trim().replace(/\s+/g, " ").replace(/\s/g, "-").toLowerCase();
@@ -201,43 +237,14 @@ module.exports = function (eleventyConfig) {
   });
 
   // Related Posts
-  eleventyConfig.addFilter(
-    "relatedPosts",
-    function (collection, items, path, limit, locale) {
-      const uniqueposts = new Set();
+  eleventyConfig.addFilter("relatedPosts", relatedPostsFilter);
 
-      collection.map((item) => {
-        if (item.data.language !== locale) return;
-        for (const etiqueta of items) {
-          // console.log(item.data.tags.length)
-          if (item.data.tags) {
-            const tags = item.data.tags.map(simpleTag);
-            if (tags.includes(simpleTag(etiqueta))) uniqueposts.add(item);
-          }
-        }
-      });
-
-      // Eliminar Post Actual
-      for (const item of uniqueposts) {
-        if (item.data.page.inputPath == path) {
-          uniqueposts.delete(item);
-        }
-      }
-
-      // Limitar el número de Articulos y que sean aleatorios
-      let articlesFiltrados = Array.from(uniqueposts);
-      if (articlesFiltrados.length <= limit) {
-        return articlesFiltrados;
-      }
-
-      do {
-        let indice = Math.floor(Math.random() * articlesFiltrados.length);
-        articlesFiltrados.splice(indice - 1, 1);
-      } while (articlesFiltrados.length > limit);
-
-      return articlesFiltrados;
-    }
-  );
+  eleventyConfig.addFilter("concatLimit", function (items, extraItems, limit) {
+    if (!extraItems) return items;
+    if (items.length >= limit) return items;
+    if (items.length === 0) return extraItems.slice(0, 3);
+    return items.concat(extraItems.slice(0, 6 - items.length));
+  });
 
   // Clean-css
   const CleanCSS = require("clean-css");

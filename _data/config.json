@@ -30,6 +30,7 @@
   "showDate": true,
   "showRelatedPosts": true,
   "languages": ["en", "ru", "ro", "es", "fr", "de", "it", "pt", "pl", "tr"],
+  "news_languages": ["en", "ro", "es", "it"],
   "ro": {
     "published": "Publicat",
     "relatedPostsTitle": "Pe aceeași temă",

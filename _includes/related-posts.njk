@@ -4,9 +4,14 @@
             <div class="column is-full">
                 <p class="title is-4 has-text-centered mt-4 mb-4">{{ config[locale].relatedPostsTitle }}</p>
             </div>
-            {%- for item in collections.all|relatedPosts(tags, page.inputPath, 3, locale) -%}
+            {% set items = collections.all | relatedPosts(tags, page.inputPath, 3, locale) | concatLimit({ro:news_ro,en:news_en,it:news_it,es:news_es}[locale], 6) %}
+            {%- for item in items -%}
                 <div class="column is-full-mobile is-one-third-tablet">
-                    {% include "card.njk" %}
+                    {% if item.data %}
+                        {% include "card.njk" %}
+                    {% else %}
+                        {% include "news-card.njk" %}
+                    {% endif %}
                 </div>
             {%- endfor -%}
         </div>

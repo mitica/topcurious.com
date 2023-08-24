@@ -12,7 +12,8 @@
   "author": "Dumitru Cantea",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "rss-parser": "^3.13.0"
   },
   "dependencies": {
     "clean-css": "^5.1.2",

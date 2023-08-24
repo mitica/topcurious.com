@@ -1,0 +1,16 @@
+<div class="card">
+
+  <figure class="image is-5by3">
+    <a target="_blank" href="{{ item.url }}">
+      <img src="{{item.image}}" alt="{{item.title}}" loading="lazy">
+    </a>
+  </figure>
+
+  <div class="p-3">
+    <h3 class="card-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark">
+      <a target="_blank" href="{{ item.url }}" class="has-text-dark">{{ item.title }}</a>
+    </h3>
+    <p class="has-text-grey-dark">{{ item.description | descriptionLength }}</p>
+  </div>
+
+</div>
