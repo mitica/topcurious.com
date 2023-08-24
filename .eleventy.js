@@ -114,6 +114,18 @@ module.exports = function (eleventyConfig) {
   //     .toLocaleString(DateTime.DATE_SHORT);
   // });
 
+  eleventyConfig.addNunjucksFilter("removeQuotes", function (text) {
+    return text.trim().replace(/"/g, "");
+  });
+
+  eleventyConfig.addNunjucksFilter("limit", function (items, limit) {
+    return items.slice(0, limit);
+  });
+
+  eleventyConfig.addNunjucksFilter("dateToISOString", function (date) {
+    return date.toISOString();
+  });
+
   eleventyConfig.addNunjucksFilter("postDate", function (date, locale, format) {
     return DateTime.fromJSDate(date)
       .setLocale(locale)
