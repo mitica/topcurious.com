@@ -12,7 +12,7 @@ featuredImageMedium: /_images/t/top-10-unexpectedly-peaceful-places-in-busy-citi
 featuredImageLarge: /_images/t/top-10-unexpectedly-peaceful-places-in-busy-cities-cover-ro-large.webp
 permalink: /ro/2023/top-10-unexpectedly-peaceful-places-in-busy-cities.html
 date: 2023-09-01T20:39:15.904Z
-youtubeVideoId: tJPR8A6F0C8
+youtubeVideoId: 5fAXTEFJONk
 language: ro
 languages: ['en', 'ru', 'ro', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'tr']
 description: >
