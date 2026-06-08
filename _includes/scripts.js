@@ -16,24 +16,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Web Share API
+// Share — Web Share API with copy-link fallback
+function showShareTooltip(message) {
+  const tip = document.getElementById("share-tooltip");
+  if (!tip) return;
+  tip.textContent = message;
+  tip.classList.add("is-visible");
+  clearTimeout(showShareTooltip._t);
+  showShareTooltip._t = setTimeout(() => tip.classList.remove("is-visible"), 1800);
+}
 
-shareMobileButton = document.getElementById("share-mobile");
-if (navigator.share) {
-  shareMobileButton.addEventListener("click", function () {
-    navigator
-      .share({
-        title: document.title,
-        url: window.location.href
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
-  });
-} else {
-  shareMobileButton.style.display = "none";
-  document.getElementById("search-mobile").classList.add("ml-auto");
+function handleShare(e) {
+  e.preventDefault();
+  const payload = { title: document.title, url: window.location.href };
+  if (navigator.share) {
+    navigator.share(payload).catch(() => {});
+    return;
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(payload.url).then(
+      () => showShareTooltip("Link copied"),
+      () => showShareTooltip("Couldn't copy")
+    );
+  }
+}
+
+const shareMobileButton = document.getElementById("share-mobile");
+if (shareMobileButton) {
+  shareMobileButton.addEventListener("click", handleShare);
+}
+
+const shareArticleButton = document.getElementById("share-article");
+if (shareArticleButton) {
+  shareArticleButton.addEventListener("click", handleShare);
 }
 
 // Search
