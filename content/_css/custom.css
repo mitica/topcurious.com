@@ -127,10 +127,17 @@ h1, h2, h3, h4 {
   font-size: 1.4rem;
   letter-spacing: -0.03em;
   position: relative;
+  /* Color the first 3 chars ("Top") in accent via background-clip trick: handled by markup if you split spans. */
 }
 .logo-text::after {
   content: ".";
   color: var(--color-accent);
+}
+.logo-text .logo-top {
+  color: var(--color-accent);
+}
+.logo-text .logo-curious {
+  color: var(--color-ink);
 }
 
 #main-navbar .navbar-item img,
