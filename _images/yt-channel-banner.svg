@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2560 1440">
+  <rect width="2560" height="1440" fill="#16181d"/>
+
+  <!-- Top accent stripe -->
+  <rect x="0" y="0" width="2560" height="18" fill="#d72a4a"/>
+
+  <!-- Hero stacked logo, visually centered (shifted left to balance the wider tagline) -->
+  <image x="870" y="530" width="660" height="313" xlink:href="logo-light.svg"/>
+
+  <!-- Italic tagline aligned with logo left edge -->
+  <text x="870" y="940" font-family="Georgia, serif" font-size="44" font-style="italic" fill="#c7c8cf">The most curious tops on the internet</text>
+</svg>
