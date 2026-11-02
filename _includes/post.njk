@@ -22,7 +22,7 @@ title: "Title"
       {% if featuredImageMedium %}
         <div class="py-5">
           <figure class="image featured-image is-5by3" onclick="putVideoHere(this, '{{ youtubeVideoId }}')">
-            <img loading="lazy" srcset="{{featuredImageSmall}} 560w, {{featuredImageMedium}} 800w" sizes="(min-width: 560px) 800px, 560px" alt="{{title}}" class="image is-fullwidth"/>
+            <img fetchpriority="high" src="{{featuredImageMedium}}" srcset="{{featuredImageSmall}} 560w, {{featuredImageMedium}} 800w" sizes="(min-width: 560px) 800px, 560px" width="800" height="450" alt="{{title | trim}}" class="image is-fullwidth"/>
             <i></i>
           </figure>
         </div>
@@ -31,7 +31,7 @@ title: "Title"
       <header class="container has-text-centered pb-5">
         {% if config.showDate %}
           <p class="mb-1">
-            <time class="has-text-grey-dark is-size-7">{{config[locale].published}}: {{ page.date | postDate(locale) }}</time>
+            <time class="has-text-grey-dark is-size-7" datetime="{{ page.date.toISOString() }}">{{config[locale].published}}: {{ page.date | postDate(locale) }}</time>
           </p>
         {% endif %}
         <p class="is-size-5 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>

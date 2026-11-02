@@ -183,6 +183,43 @@ module.exports = function (eleventyConfig) {
     return locale ? `/${locale}${url}` : url;
   });
 
+  // Same page in other languages: /{lang}/rest-of-url, only if it exists
+  const knownUrls = new WeakMap();
+  eleventyConfig.addFilter("translations", function (url, collection) {
+    const match = /^\/([a-z]{2})(\/.*)$/.exec(url || "");
+    if (!match || !languages.includes(match[1])) return [];
+    if (match[2] === "/") {
+      return languages.map((lang) => ({ lang, url: `/${lang}/` }));
+    }
+    let urls = knownUrls.get(collection);
+    if (!urls) {
+      urls = new Set(collection.map((item) => item.url));
+      knownUrls.set(collection, urls);
+    }
+    return languages
+      .map((lang) => ({ lang, url: `/${lang}${match[2]}` }))
+      .filter((item) => urls.has(item.url));
+  });
+
+  const ogLocales = {
+    en: "en_US",
+    ru: "ru_RU",
+    ro: "ro_RO",
+    es: "es_ES",
+    fr: "fr_FR",
+    de: "de_DE",
+    it: "it_IT",
+    pt: "pt_BR",
+    pl: "pl_PL",
+    tr: "tr_TR"
+  };
+  eleventyConfig.addFilter("ogLocale", (lang) => ogLocales[lang] || "en_US");
+
+  // Safe to embed inside <script type="application/ld+json">
+  eleventyConfig.addFilter("jsonLd", (data) =>
+    JSON.stringify(data).replace(/</g, "\\u003c")
+  );
+
   eleventyConfig.addFilter("tagParam", simpleTag);
   eleventyConfig.addFilter("langNativeName", getLangNativeName);
 

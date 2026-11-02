@@ -8,6 +8,10 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ config.url }}/{{ locale }}/</loc>
+        <changefreq>daily</changefreq>
+    </url>
     {% for page in collections['posts_' + locale] %}
        {% if not page.data.draft %}
         <url>
