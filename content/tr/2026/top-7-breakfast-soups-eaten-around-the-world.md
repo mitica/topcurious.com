@@ -12,7 +12,7 @@ featuredImageMedium: /_images/t/top-7-breakfast-soups-eaten-around-the-world-cov
 featuredImageLarge: /_images/t/top-7-breakfast-soups-eaten-around-the-world-cover-tr-large.webp
 permalink: /tr/2026/top-7-breakfast-soups-eaten-around-the-world.html
 date: 2026-11-02T08:59:22.740Z
-youtubeVideoId: Wj1CO6nb-jw
+youtubeVideoId: L03HwKt9kN0
 language: tr
 languages: ['en', 'ru', 'ro', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'tr']
 description: >
