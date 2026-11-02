@@ -1,3 +1,5 @@
 
 User-agent: *
-sitemap: https://www.topcurious.com/sitemap.xml
+Allow: /
+
+Sitemap: https://topcurious.com/sitemap.xml
