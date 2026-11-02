@@ -28,22 +28,59 @@ eleventyExcludeFromCollections: true
     <ul class="langs">
       {% for lang in config.languages %}
         <li>
-          <a href="/{{ lang }}/">{{ lang | langNativeName }}</a>
+          <a href="/{{ lang }}/" data-lang="{{ lang }}">{{ lang | langNativeName }}</a>
         </li>
       {% endfor %}
     </ul>
   </div>
-  {# <script>
-    function redirectToUserLocale() {
-      setTimeout(() => {
-        const userLocale = (navigator.language || navigator.userLanguage).substring(0, 2);
-        if (userLocale && userLocale !== CURRENT_LOCALE && ALL_LOCALES.includes(userLocale)) {
-          window
-            .location
-            .replace(`/${userLocale}/`);
+  <script>
+    (function () {
+      var STORAGE_KEY = "preferredLang";
+
+      function storageGet() {
+        try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+      }
+
+      function storageSet(value) {
+        try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
+      }
+
+      /* Remember the language the user picks manually */
+      var links = document.querySelectorAll(".langs a[data-lang]");
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function () {
+          storageSet(this.getAttribute("data-lang"));
+        });
+      }
+
+      /* Don't redirect crawlers: they should see and index the language list */
+      if (/bot|crawl|spider|slurp|lighthouse|facebookexternalhit|preview/i.test(navigator.userAgent || "")) return;
+
+      /* Don't redirect if the user explicitly asked for this page */
+      if (/[?&]nolang\b/.test(location.search)) return;
+      if (document.referrer) {
+        try {
+          if (new URL(document.referrer).host === location.host) return;
+        } catch (e) {}
+      }
+
+      function supported(tag) {
+        if (!tag) return null;
+        var code = String(tag).toLowerCase().split(/[-_]/)[0];
+        return ALL_LOCALES.indexOf(code) !== -1 ? code : null;
+      }
+
+      var target = supported(storageGet());
+      if (!target) {
+        var prefs = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || navigator.userLanguage];
+        for (var j = 0; j < prefs.length && !target; j++) {
+          target = supported(prefs[j]);
         }
-      }, 1000);
-    }
-    redirectToUserLocale();
-  </script> #}
+      }
+
+      if (target) location.replace("/" + target + "/");
+    })();
+  </script>
 </section>
